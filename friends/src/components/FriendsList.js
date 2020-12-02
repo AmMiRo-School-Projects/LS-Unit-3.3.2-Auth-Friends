@@ -25,7 +25,6 @@ const FriendsList = () => {
   const [friends, setFriends] = useState([]);
 
   useEffect(() => {
-    const token = window.localStorage.getItem("token");
     axiosWithAuth()
       .get("/api/friends")
       .then(res => {
